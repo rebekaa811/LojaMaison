@@ -1,10 +1,11 @@
 <?php
-// Lista de produtos (poderia ser carregada de um banco de dados)
+
 $produtos = [
-    ['nome' => 'Camiseta Básica', 'preco' => 49.99, 'imagem' => 'camisa.png'],
-    ['nome' => 'Jeans Masculino', 'preco' => 89.99, 'imagem' => 'jeans.png'],
-    ['nome' => 'Vestido Estiloso', 'preco' => 129.99, 'imagem' => 'vestido.png'],
-    ['nome' => 'Blusa de Frio', 'preco' => 99.99, 'imagem' => 'blusa.png'],
+    ['nome' => 'Conjunto Rosa', 'preco' => 240.00, 'imagem' => 'conjunto_rosa.png'],
+    ['nome' => 'Conjunto White', 'preco' => 280.00, 'imagem' => 'conjunto_white.png'],
+    ['nome' => 'Cropped', 'preco' => 129.99, 'imagem' => 'cropped.png'],
+    ['nome' => 'Vestido White', 'preco' => 150.00, 'imagem' => 'vestido_white.png'],
+    ['nome' => 'Vestido de Paete', 'preco' => 180.00, 'imagem' => 'vestido.png'],
 ];
 ?>
 
@@ -13,20 +14,25 @@ $produtos = [
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loja de Roupas</title>
+    <title>Maison I</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="icon.png">
 </head>
 <body>
     <header>
+
         <div class="logo">
             <h1>MAISON I</h1>
         </div>
+        <div id="dov">
+        <img src="icon.png" align-item ="center" height="70px">
+        </div>
+         
         <nav>
             <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Produtos</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="index.php">Início</a></li>
+                <li><a href="https://www.instagram.com/maison_mi/" target="_blank">Instagram</a></li>
+                <li><a href="https://wa.me/5583998010622?text=Oii%2C%20gostaria%20de%20ver%20o%20cat%C3%A1logo%20dispon%C3%ADvel%20" target="_blank">Contato</a></li>
             </ul>
         </nav>
     </header>
@@ -39,7 +45,7 @@ $produtos = [
                     <img src="images/<?php echo $produto['imagem']; ?>" alt="<?php echo $produto['nome']; ?>">
                     <h3><?php echo $produto['nome']; ?></h3>
                     <p>R$ <?php echo number_format($produto['preco'], 2, ',', '.'); ?></p>
-                    <a href="#">Adicionar ao Carrinho</a>
+                    <button>Adicionar ao carrinho</button>
                 </div>
             <?php endforeach; ?>
         </div>
@@ -47,6 +53,8 @@ $produtos = [
 
     <footer>
         <p>&copy; 2024 Maison I | Novos looks e um visual sem outro igual</p>
+        
+        
     </footer>
 </body>
 </html>

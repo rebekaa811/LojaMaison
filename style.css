@@ -1,23 +1,41 @@
 /* Reset de estilos padrões */
+#dov{
+    display: flex;
+    justify-content: center;
+    
+}
+button{
+    display: flexbox;
+    background-color:rgb(117, 208, 254);
+    padding: 5px 10px;
+    font-size: 15px;
+    border:#64c1ff;
+    border-radius: 6px;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    color: #333;
+    color:black;
+    
 }
 
 header {
-    background-color: #333;
+    background-color:black;
     color: white;
-    padding: 10px 20px;
+    padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
+    
 }
 
 header .logo h1 {
@@ -92,7 +110,7 @@ nav ul li a {
 }
 
 footer {
-    background-color: #333;
+    background-color:black;
     color: white;
     text-align: center;
     padding: 20px;
