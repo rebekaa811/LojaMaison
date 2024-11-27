@@ -6,6 +6,11 @@ $produtos = [
     ['nome' => 'Cropped', 'preco' => 129.99, 'imagem' => 'cropped.png'],
     ['nome' => 'Vestido White', 'preco' => 150.00, 'imagem' => 'vestido_white.png'],
     ['nome' => 'Vestido de Paete', 'preco' => 180.00, 'imagem' => 'vestido.png'],
+    ['nome' => 'Macacão Longo', 'preco' => 220.00, 'imagem' => 'macacao_verde.png'],
+    ['nome' => 'Macacão White ', 'preco' => 220.00, 'imagem' => 'macacao_white.png'],
+    ['nome' => 'Vestido Drapeado', 'preco' => 170.00, 'imagem' => 'vestido_drapeado.png'],
+    ['nome' => 'Vestido Flower', 'preco' => 240.00, 'imagem' => 'vestido_flores.png'],
+    ['nome' => 'Body Lurex', 'preco' => 100.00, 'imagem' => 'body.png'],
 ];
 ?>
 
@@ -17,6 +22,7 @@ $produtos = [
     <title>Maison I</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="icon.png">
+    <link rel="stylesheet" href="css/main-footer">
 </head>
 <body>
     <header>
@@ -25,7 +31,7 @@ $produtos = [
             <h1>MAISON I</h1>
         </div>
         <div id="dov">
-        <img src="icon.png" align-item ="center" height="70px">
+        <img src="icon.png" align-item ="center" height="60px">
         </div>
          
         <nav>
