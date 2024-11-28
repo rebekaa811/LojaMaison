@@ -12,6 +12,7 @@ $produtos = [
     ['nome' => 'Vestido Flower', 'preco' => 240.00, 'imagem' => 'vestido_flores.png'],
     ['nome' => 'Body Lurex', 'preco' => 100.00, 'imagem' => 'body.png'],
 ];
+
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +23,7 @@ $produtos = [
     <title>Maison I</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="icon.png">
-    <link rel="stylesheet" href="css/main-footer">
+    <link rel="stylesheet" href="login.php">
 </head>
 <body>
     <header>
@@ -33,10 +34,11 @@ $produtos = [
         <div id="dov">
         <img src="icon.png" align-item ="center" height="60px">
         </div>
-         
+
         <nav>
             <ul>
                 <li><a href="index.php">Início</a></li>
+                <li><a href="login.php">Cadrasto</a></li>
                 <li><a href="https://www.instagram.com/maison_mi/" target="_blank">Instagram</a></li>
                 <li><a href="https://wa.me/5583998010622?text=Oii%2C%20gostaria%20de%20ver%20o%20cat%C3%A1logo%20dispon%C3%ADvel%20" target="_blank">Contato</a></li>
             </ul>
