@@ -23,7 +23,6 @@ $produtos = [
     <title>Maison I</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="icon.png">
-    <link rel="stylesheet" href="login.php">
 </head>
 <body>
     <header>
@@ -61,7 +60,6 @@ $produtos = [
 
     <footer>
         <p>&copy; 2024 Maison I | Novos looks e um visual sem outro igual</p>
-        
         
     </footer>
 </body>
