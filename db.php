@@ -1,13 +1,13 @@
 <?php
 
-$servername = "localhost";
-$username = "root";        
-$password = "";            
-$dbname = "loja";        
+$hostname = "localhost";
+$bancodedados = "loja";        
+$usuario = "root";        
+$senha = "";            
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+$mysqli = new mysqli($hostname, $usuario, $senha, $bancodedados);
 
-if ($conn->connect_error) {
-    die("Falha na conexão: " . $conn->connect_error);
+if ($mysqli->connect_error) {
+    die("Falha na conexão: " . $mysqli->connect_error);
 }
 ?>

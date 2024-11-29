@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 $produtos = [
     ['nome' => 'Conjunto Rosa', 'preco' => 240.00, 'imagem' => 'conjunto_rosa.png'],
@@ -7,7 +8,7 @@ $produtos = [
     ['nome' => 'Vestido White', 'preco' => 150.00, 'imagem' => 'vestido_white.png'],
     ['nome' => 'Vestido de Paete', 'preco' => 180.00, 'imagem' => 'vestido.png'],
     ['nome' => 'Macacão Longo', 'preco' => 220.00, 'imagem' => 'macacao_verde.png'],
-    ['nome' => 'Macacão White ', 'preco' => 220.00, 'imagem' => 'macacao_white.png'],
+    ['nome' => 'Macacão White', 'preco' => 220.00, 'imagem' => 'macacao_white.png'],
     ['nome' => 'Vestido Drapeado', 'preco' => 170.00, 'imagem' => 'vestido_drapeado.png'],
     ['nome' => 'Vestido Flower', 'preco' => 240.00, 'imagem' => 'vestido_flores.png'],
     ['nome' => 'Body Lurex', 'preco' => 100.00, 'imagem' => 'body.png'],
@@ -28,18 +29,16 @@ $produtos = [
 </head>
 <body>
     <header>
-
         <div class="logo">
             <h1>MAISON I</h1>
         </div>
         <div id="dov">
-        <img src="icon.png" align-item ="center" height="60px">
+            <img src="icon.png" align-item="center" height="60px">
         </div>
-
         <nav>
             <ul>
-                <li><a href="#">Carrinho</a></li>
-                <li><a href="login.php">Cadrasto</a></li>
+                <li><a href="carrinho.php">Carrinho</a></li>
+                <li><a href="login.php">Cadastro</a></li>
                 <li><a href="https://www.instagram.com/maison_mi/" target="_blank">Instagram</a></li>
                 <li><a href="https://wa.me/5583998010622?text=Oii%2C%20gostaria%20de%20ver%20o%20cat%C3%A1logo%20dispon%C3%ADvel%20" target="_blank">Contato</a></li>
             </ul>
@@ -47,19 +46,24 @@ $produtos = [
     </header>
 
     <section class="produtos">
-        <h2></h2>
+        <h2>Produtos</h2>
         <div class="produtos-lista">
             <?php foreach ($produtos as $produto): ?>
                 <div class="produto">
                     <img src="images/<?php echo $produto['imagem']; ?>" alt="<?php echo $produto['nome']; ?>">
                     <h3><?php echo $produto['nome']; ?></h3>
                     <p>R$ <?php echo number_format($produto['preco'], 2, ',', '.'); ?></p>
-                    <button>Adicionar ao carrinho</button>
+                    <form action="adicionar_carrinho.php" method="POST">
+                        <input type="hidden" name="produto_id" value="<?php echo $produto['nome']; ?>">
+                        <input type="hidden" name="produto_nome" value="<?php echo $produto['nome']; ?>">
+                        <input type="hidden" name="produto_preco" value="<?php echo $produto['preco']; ?>">
+                        <button type="submit">Adicionar ao Carrinho</button>
+                    </form>
                 </div>
             <?php endforeach; ?>
         </div>
     </section>
-   <?php include 'footer.php';?>
 
+    <?php include 'footer.php'; ?>
 </body>
 </html>

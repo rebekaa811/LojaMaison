@@ -11,7 +11,7 @@
     <main>
         <h1>Cadastro</h1>
 
-        <form id="signupForm" action="add.php" method="POST">
+        <form action="add.php" method="POST">
             <label for="Nome">
                 <span>Nome</span>
                 <input type="text" id="Nome" name="Nome" required>
@@ -30,17 +30,10 @@
             <input type="submit" value="Cadastrar-se">
             <br>
             <div class="seqlg">
-                <p>Já tenho uma conta.</p>
+                <p>Já tenho uma conta. </p>
                 <a href="vlogin.php">Fazer login</a>
             </div>
-           
-            </form>
+        </form>
     </main>
-    <script>
-        document.getElementById('signupForm').onsubmit = function(event) {
-            event.preventDefault();
-            window.location.href = 'vlogin.php';
-        };
-    </script>
 </body>
 </html>
