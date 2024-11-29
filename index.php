@@ -23,6 +23,8 @@ $produtos = [
     <title>Maison I</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <header>
@@ -36,7 +38,7 @@ $produtos = [
 
         <nav>
             <ul>
-                <li><a href="index.php">Início</a></li>
+                <li><a href="#">Carrinho</a></li>
                 <li><a href="login.php">Cadrasto</a></li>
                 <li><a href="https://www.instagram.com/maison_mi/" target="_blank">Instagram</a></li>
                 <li><a href="https://wa.me/5583998010622?text=Oii%2C%20gostaria%20de%20ver%20o%20cat%C3%A1logo%20dispon%C3%ADvel%20" target="_blank">Contato</a></li>
@@ -57,10 +59,7 @@ $produtos = [
             <?php endforeach; ?>
         </div>
     </section>
+   <?php include 'footer.php';?>
 
-    <footer>
-        <p>&copy; 2024 Maison I | Novos looks e um visual sem outro igual</p>
-        
-    </footer>
 </body>
 </html>
